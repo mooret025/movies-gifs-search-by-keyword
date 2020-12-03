@@ -20,7 +20,21 @@ function createCards(search) {
   const card = document.createElement("div");
   card.style.width = "100px";
   card.style.height = "100px";
-  card.style.backgroundColor = "blue";
+  card.style.backgroundColor = "orange";
+
+  const title = document.createElement("h3");
+  title.innerHTML = search;
+  card.appendChild(title);
+
+  const buttonGif = document.createElement("button");
+  buttonGif.textContent = "Gifs";
+  card.appendChild(buttonGif);
+  buttonGif.addEventListener("click", () => searchGifs(search));
+
+  const buttonMovie = document.createElement("button");
+  buttonMovie.textContent = "Movies";
+  card.appendChild(buttonMovie);
+  buttonMovie.addEventListener("click", () => searchMovies(search));
   cardContainer.appendChild(card);
   //   button.textContent = search;
   //   buttonContainer.appendChild(button);
