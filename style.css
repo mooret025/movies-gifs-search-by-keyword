@@ -1,28 +1,24 @@
-/* override browser default */
-html,
-body {
-  margin: 0;
-  padding: 0;
+.container {
+  display: grid;
+
+  /* grid-template-columns: 100px auto 100px; */
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: repeat(3, 1fr);
+  same as above */
+
+  /* grid-template: repeat(2, 50px) / repeat(3, 1fr);
+  this combines rows then columns */
+
+  /* Places equally spaced gaps around grid objects */
+  grid-gap: 3px;
+
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
 }
 
-/* use viewport-relative units to cover page fully */
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
-/* include border and padding in element width and height */
-* {
-  box-sizing: border-box;
-}
-
-/* full-sized  container that fills up the page */
-#card_container {
-  height: 100%;
-  width: 100%;
-
-  /* example padding, font-size, background, etc */
-  padding: 10px;
-  font-size: 20px;
-  background-color: lightskyblue;
+#form {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: 1 / -1;
 }
